@@ -1,0 +1,10 @@
+{
+	"materials": {
+		"version": "1.0.0",
+		"choochoo_light:entity_alphablend": {
+				"+states": ["DisableCulling"],
+				"-defines": ["FANCY"],
+				"+defines": ["USE_EMISSIVE"]
+		}
+	}
+}

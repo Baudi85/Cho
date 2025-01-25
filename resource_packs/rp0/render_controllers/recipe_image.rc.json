@@ -1,0 +1,19 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.recipe_image": {
+			"geometry": "geometry.default",
+			"arrays": {
+				"textures": {
+					"array.skin": ["texture.spider_silk", "texture.portal"]
+				}
+			},
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": ["array.skin[q.variant]"]
+		}
+	}
+}

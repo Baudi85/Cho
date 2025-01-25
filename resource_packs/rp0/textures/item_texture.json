@@ -1,0 +1,15 @@
+{
+	"resource_pack_name": "vanilla",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"portal": {
+			"textures": "textures/items/portal/portal_item"
+		},
+		"mask": {
+			"textures": "textures/items/reward/mask_item"
+		},
+		"spider_silk": {
+			"textures": "textures/items/collectible/spider_silk_item"
+		}
+	}
+}

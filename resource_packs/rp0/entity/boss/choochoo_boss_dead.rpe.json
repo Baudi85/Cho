@@ -1,0 +1,29 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "shapescape:choochoo_boss_dead",
+			"materials": {
+				"default": "entity_emissive_alpha",
+				"light": "choochoo_light"
+			},
+			"textures": {
+				"default": "textures/entity/boss/choochoo_boss_entity"
+			},
+			"geometry": {
+				"default": "geometry.choochoo_boss"
+			},
+			"animations": {
+				"death": "animation.choochoo_boss.death"
+			},
+			"scripts": {
+				"animate": ["death"]
+			},
+			"render_controllers": ["controller.render.choochoo_boss"],
+			"spawn_egg": {
+				"base_color": "#288483",
+				"overlay_color": "#2B7135"
+			}
+		}
+	}
+}

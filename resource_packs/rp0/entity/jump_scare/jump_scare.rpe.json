@@ -1,0 +1,29 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "shapescape:jump_scare",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/boss/choochoo_boss_entity"
+			},
+			"geometry": {
+				"default": "geometry.choochoo_boss"
+			},
+			"render_controllers": ["controller.render.default"],
+			"animations": {
+				"align_rotation": "animation.jump_scare.align_rotation",
+				"cutscene": "animation.jump_scare.cutscene"
+			},
+			"scripts": {
+				"animate": ["align_rotation", "cutscene"]
+			},
+			"spawn_egg": {
+				"base_color": "#288483",
+				"overlay_color": "#2B7135"
+			}
+		}
+	}
+}

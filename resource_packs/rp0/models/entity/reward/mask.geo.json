@@ -1,0 +1,123 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.player_mask",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "head",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-4, -0.5, -5.4],
+							"size": [8, 9, 1],
+							"inflate": 0.2,
+							"uv": [0, 10]
+						},
+						{
+							"origin": [-4.5, 3.5, -4.5],
+							"size": [9, 1, 9],
+							"uv": [0, 54]
+						},
+						{
+							"origin": [-3, 1.4, -5.7],
+							"size": [6, 1, 1],
+							"uv": [0, 0]
+						}
+					]
+				},
+				{
+					"name": "eye_left",
+					"parent": "head",
+					"pivot": [1.4, 4.7, -5.65],
+					"cubes": [
+						{
+							"origin": [1.4, 4.7, -5.65],
+							"size": [1, 1, 0],
+							"uv": [17, 1]
+						}
+					]
+				},
+				{
+					"name": "eye_right",
+					"parent": "head",
+					"pivot": [-1.4, 4.7, -5.65],
+					"cubes": [
+						{
+							"origin": [-2.4, 4.7, -5.65],
+							"size": [1, 1, 0],
+							"uv": [17, 1],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "teeth",
+					"parent": "head",
+					"pivot": [0, 1.85, -5.65]
+				},
+				{
+					"name": "tooth0",
+					"parent": "teeth",
+					"pivot": [0.375, 1.9, -5.65],
+					"rotation": [0, 0, 6],
+					"cubes": [
+						{
+							"origin": [0.74795, -0.0608, -5.65],
+							"size": [0.75, 2, 1],
+							"uv": [14, -1]
+						}
+					]
+				},
+				{
+					"name": "tooth2",
+					"parent": "teeth",
+					"pivot": [-0.375, 1.9, -5.65],
+					"rotation": [0, 0, -6],
+					"cubes": [
+						{
+							"origin": [-1.49795, -0.0608, -5.65],
+							"size": [0.75, 2, 1],
+							"uv": [14, -1],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "tooth1",
+					"parent": "teeth",
+					"pivot": [1.575, 2.35, -5.65],
+					"rotation": [0, 0, 13.5],
+					"cubes": [
+						{
+							"origin": [1.93964, 0.43754, -5.65],
+							"size": [0.75, 2, 1],
+							"uv": [14, -1]
+						}
+					]
+				},
+				{
+					"name": "tooth3",
+					"parent": "teeth",
+					"pivot": [-1.575, 2.35, -5.65],
+					"rotation": [0, 0, -13.5],
+					"cubes": [
+						{
+							"origin": [-2.68964, 0.43754, -5.65],
+							"size": [0.75, 2, 1],
+							"uv": [14, -1],
+							"mirror": true
+						}
+					]
+				}
+			]
+		}
+	]
+}

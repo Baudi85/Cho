@@ -1,0 +1,157 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:npc_dialogue": {
+		"scenes": [
+			{
+				"scene_tag": "tutorial_npc.start_1",
+				"npc_name": {
+					"rawtext": [
+						{
+							"translate": "tutorial_npc.name"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"translate": "tutorial_npc.message.start_1",
+							"with": ["\n"]
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "tutorial_npc.button.start_survival"
+								}
+							]
+						},
+						"commands": ["/function main/trs_tutorial_start"]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "tutorial_npc.button.start_boss_fight"
+								}
+							]
+						},
+						"commands": ["/dialogue open @s @initiator tutorial_npc.start_2"]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "tutorial_npc.button.close"
+								}
+							]
+						},
+						"commands": []
+					}
+				]
+			},
+			{
+				"scene_tag": "tutorial_npc.start_2",
+				"npc_name": {
+					"rawtext": [
+						{
+							"translate": "tutorial_npc.name"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"translate": "tutorial_npc.message.start_2",
+							"with": ["\n"]
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "tutorial_npc.button.start_survival"
+								}
+							]
+						},
+						"commands": ["/function main/trs_tutorial_start"]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "tutorial_npc.button.start_boss_fight"
+								}
+							]
+						},
+						"commands": ["/dialogue open @s @initiator tutorial_npc.start_3"]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "tutorial_npc.button.close"
+								}
+							]
+						},
+						"commands": []
+					}
+				]
+			},
+			{
+				"scene_tag": "tutorial_npc.start_3",
+				"npc_name": {
+					"rawtext": [
+						{
+							"translate": "tutorial_npc.name"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"translate": "tutorial_npc.message.start_3",
+							"with": ["\n"]
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "tutorial_npc.button.start_survival"
+								}
+							]
+						},
+						"commands": ["/function main/trs_tutorial_start"]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "tutorial_npc.button.start_boss_fight"
+								}
+							]
+						},
+						"commands": ["/function main/trs_skip_to_boss"]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "tutorial_npc.button.close"
+								}
+							]
+						},
+						"commands": []
+					}
+				]
+			}
+		]
+	}
+}

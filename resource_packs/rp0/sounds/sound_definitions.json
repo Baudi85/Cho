@@ -1,0 +1,188 @@
+{
+	"format_version": "1.14.0",
+	"sound_definitions": {
+		"jump_scare_trigger.incoming_train": {
+			"sounds": [
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/jump_scare_trigger/incoming_train",
+					"volume": 1.0,
+					"is3D": false
+				}
+			]
+		},
+		"jump_scare_trigger.passing_train": {
+			"sounds": [
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/jump_scare_trigger/passing_train",
+					"volume": 1.0,
+					"is3D": false
+				}
+			]
+		},
+		"jump_scare_trigger.silence_45s": {
+			"sounds": [
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/jump_scare_trigger/silence_45s",
+					"volume": 1.0,
+					"is3D": false
+				}
+			]
+		},
+		"jump_scare_trigger.random_sound": {
+			"sounds": [
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/jump_scare_trigger/random_sound_1",
+					"volume": 1.0,
+					"is3D": false
+				},
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/jump_scare_trigger/random_sound_2",
+					"volume": 1.0,
+					"is3D": false
+				},
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/jump_scare_trigger/random_sound_3",
+					"volume": 1.0,
+					"is3D": false
+				},
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/jump_scare_trigger/random_sound_4",
+					"volume": 1.0,
+					"is3D": false
+				}
+			]
+		},
+		"reward.mask_sound": {
+			"sounds": [
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/reward/laughter",
+					"volume": 0.3
+				},
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/reward/laughter_1",
+					"volume": 0.3
+				},
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/reward/whistle",
+					"volume": 0.3
+				}
+			]
+		},
+		"jump_scare.jump_scare": {
+			"sounds": [
+				{
+					"load_on_low_memory": false,
+					"name": "sounds/jump_scare/jump_scare",
+					"is3D": false
+				},
+				{
+					"name": "sounds/jump_scare/jump_scare_1",
+					"is3D": false
+				}
+			]
+		},
+		"boss.rotation_clunk": {
+			"sounds": [
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/boss/rotation_clunk",
+					"volume": 0.3
+				}
+			]
+		},
+		"boss.rotation_clunk_cutscene": {
+			"sounds": [
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/boss/rotation_clunk_cutscene",
+					"volume": 2.0
+				}
+			]
+		},
+		"boss.attack_steam_preparation": {
+			"sounds": [
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/boss/attack_steam_preparation",
+					"volume": 1.0
+				}
+			]
+		},
+		"boss.attack_steam_release": {
+			"sounds": [
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/boss/attack_steam_release",
+					"volume": 1.0
+				}
+			]
+		},
+		"boss.attack_swoop": {
+			"sounds": [
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/boss/attack_swoop",
+					"volume": 1.0
+				},
+				{
+					"load_on_low_memory": false,
+					"name": "sounds/boss/attack_swoop_1",
+					"volume": 1.0
+				},
+				{
+					"load_on_low_memory": false,
+					"name": "sounds/boss/attack_swoop_2",
+					"volume": 1.0
+				},
+				{
+					"load_on_low_memory": false,
+					"name": "sounds/boss/attack_swoop_3",
+					"volume": 1.0
+				}
+			]
+		},
+		"boss.squat_of_summoning": {
+			"sounds": [
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/boss/squat_of_summoning",
+					"volume": 1.0
+				},
+				{
+					"load_on_low_memory": false,
+					"name": "sounds/boss/squat_of_summoning_1",
+					"volume": 1.0
+				}
+			]
+		},
+		"boss.ambient": {
+			"sounds": [
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/boss/ambient",
+					"volume": 2.0
+				}
+			]
+		},
+		"boss.cutscene_ambient": {
+			"sounds": [
+				{
+					"load_on_low_memory": true,
+					"is3D": false,
+					"name": "sounds/boss/cutscene_ambient",
+					"volume": 0.5
+				}
+			]
+		}
+	}
+}

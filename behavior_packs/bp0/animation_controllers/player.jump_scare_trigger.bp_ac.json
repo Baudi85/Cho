@@ -1,0 +1,36 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.player.jump_scare_trigger.brightness": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"bright": "q.property('shapescape:jump_scare_trigger_brightness') == 'bright'"
+						},
+						{
+							"dark": "q.property('shapescape:jump_scare_trigger_brightness') == 'dark'"
+						}
+					]
+				},
+				"dark": {
+					"transitions": [
+						{
+							"bright": "q.property('shapescape:jump_scare_trigger_brightness') == 'bright'"
+						}
+					],
+					"on_entry": ["/tag @s add jump_scare_trigger_dark", "/tag @s remove jump_scare_trigger_bright"]
+				},
+				"bright": {
+					"transitions": [
+						{
+							"dark": "q.property('shapescape:jump_scare_trigger_brightness') == 'dark'"
+						}
+					],
+					"on_entry": ["/tag @s add jump_scare_trigger_bright", "/tag @s remove jump_scare_trigger_dark"]
+				}
+			}
+		}
+	}
+}

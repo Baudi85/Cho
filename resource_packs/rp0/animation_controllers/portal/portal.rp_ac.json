@@ -1,0 +1,17 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.portal.particle": {
+			"states": {
+				"default": {
+					"particle_effects": [
+						{
+							"effect": "portal",
+							"locator": "portal"
+						}
+					]
+				}
+			}
+		}
+	}
+}

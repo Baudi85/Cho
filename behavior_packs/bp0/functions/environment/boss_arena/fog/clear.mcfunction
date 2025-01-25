@@ -1,0 +1,1 @@
+fog @s remove boss_arena

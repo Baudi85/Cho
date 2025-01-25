@@ -1,0 +1,1 @@
+structure load shapescape:arena_crates 186 -2 -433 0_degrees none

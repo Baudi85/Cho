@@ -1,0 +1,77 @@
+{
+	"format_version": "1.18.0",
+	"animations": {
+		"animation.tutorial_jump_scare.default_s0_0": {
+			"loop": false,
+			"animation_length": 0.15000000000000002,
+			"timeline": {
+				"0.0": [
+					"/function tutorial_jump_scare/default_s0_0_0"
+				]
+			}
+		},
+		"animation.tutorial_jump_scare.default_s1_0": {
+			"loop": false,
+			"animation_length": 0.4,
+			"timeline": {
+				"0.0": [
+					"/tp @e[type=shapescape:choochoo_boss_tutorial] 143.00 -17.00 -289.50 90.00 0.00"
+				],
+				"0.025": [
+					"/tp @e[type=shapescape:choochoo_boss_tutorial] 142.59 -17.00 -289.50 90.00 2.73"
+				],
+				"0.05": [
+					"/tp @e[type=shapescape:choochoo_boss_tutorial] 142.18 -17.00 -289.50 90.00 5.45"
+				],
+				"0.075": [
+					"/tp @e[type=shapescape:choochoo_boss_tutorial] 141.77 -17.00 -289.50 90.00 8.18"
+				],
+				"0.1": [
+					"/tp @e[type=shapescape:choochoo_boss_tutorial] 141.36 -17.00 -289.50 90.00 10.91"
+				],
+				"0.125": [
+					"/tp @e[type=shapescape:choochoo_boss_tutorial] 140.95 -17.00 -289.50 90.00 13.64"
+				],
+				"0.15": [
+					"/tp @e[type=shapescape:choochoo_boss_tutorial] 140.55 -17.00 -289.50 90.00 16.36"
+				],
+				"0.175": [
+					"/tp @e[type=shapescape:choochoo_boss_tutorial] 140.14 -17.00 -289.50 90.00 19.09"
+				],
+				"0.2": [
+					"/tp @e[type=shapescape:choochoo_boss_tutorial] 139.73 -17.00 -289.50 90.00 21.82"
+				],
+				"0.225": [
+					"/tp @e[type=shapescape:choochoo_boss_tutorial] 139.32 -17.00 -289.50 90.00 24.55"
+				],
+				"0.25": [
+					"/tp @e[type=shapescape:choochoo_boss_tutorial] 138.91 -17.00 -289.50 90.00 27.27"
+				],
+				"0.3": [
+					"/tp @e[type=shapescape:choochoo_boss_tutorial] 138.50 -17.00 -289.50 90.00 30.00"
+				]
+			}
+		},
+		"animation.tutorial_jump_scare.default_s1_1": {
+			"loop": false,
+			"animation_length": 0.4,
+			"timeline": {
+				"0.0": [
+					"/function tutorial_jump_scare/default_s1_1_0"
+				],
+				"0.1": [
+					"/playsound jump_scare.jump_scare @a ~ ~ ~ 1 1"
+				]
+			}
+		},
+		"animation.tutorial_jump_scare.default_s2_0": {
+			"loop": false,
+			"animation_length": 3.1,
+			"timeline": {
+				"3.0": [
+					"/function tutorial_jump_scare/default_s2_0_120"
+				]
+			}
+		}
+	}
+}

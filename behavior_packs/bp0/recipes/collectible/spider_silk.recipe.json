@@ -1,0 +1,22 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "shapescape:spider_silk"
+		},
+		"tags": ["crafting_table"],
+		"pattern": [" B ", "BSB", " B "],
+		"key": {
+			"S": {
+				"item": "minecraft:string"
+			},
+			"B": {
+				"item": "minecraft:blaze_powder"
+			}
+		},
+		"result": {
+			"item": "shapescape:spider_silk",
+			"count": 1
+		}
+	}
+}

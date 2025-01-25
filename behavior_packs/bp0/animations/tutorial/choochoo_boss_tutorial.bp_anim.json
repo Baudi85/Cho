@@ -1,0 +1,12 @@
+{
+	"format_version": "1.19.0",
+	"animations": {
+		"animation.tutorial.detect_player": {
+			"loop": true,
+			"animation_length": 0.04,
+			"timeline": {
+				"0.0": ["/execute if score tutorial_jump_scare var matches 1 as @p[x=135, y=-17, z=-292, dx=-6, dy=3, dz=2] run summon camera:tutorial_jump_scare"]
+			}
+		}
+	}
+}

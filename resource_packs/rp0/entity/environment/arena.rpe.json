@@ -1,0 +1,33 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "shapescape:arena",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/empty"
+			},
+			"geometry": {
+				"default": "geometry.arena"
+			},
+			"particle_effects": {
+				"dust": "shapescape:dust",
+				"wide_ray": "shapescape:wide_ray",
+				"floor_fog": "shapescape:floor_fog"
+			},
+			"scripts": {
+				"animate": ["particles"]
+			},
+			"animations": {
+				"particles": "controller.animation.arena.particles"
+			},
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#288483",
+				"overlay_color": "#2B7135"
+			}
+		}
+	}
+}

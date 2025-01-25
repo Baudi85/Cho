@@ -1,0 +1,196 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.choochoo_boss.face": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"cutscene_spin": "query.variant == 1"
+						},
+						{
+							"random_wait": "q.variant == 2"
+						}
+					]
+				},
+				"cutscene_spin": {
+					"animations": ["head_rotation_cutscene"],
+					"transitions": [
+						{
+							"random_wait": "q.all_animations_finished && q.variant == 2"
+						}
+					]
+				},
+				"random_wait": {
+					"animations": ["look_at_target"],
+					"on_entry": ["v.choo_choo_boss_face_timestamp = q.life_time + math.random(15, 20);"],
+					"transitions": [
+						{
+							"head_rotation": "q.life_time > v.choo_choo_boss_face_timestamp"
+						}
+					]
+				},
+				"head_rotation": {
+					"animations": ["head_rotation"],
+					"transitions": [
+						{
+							"random_wait": "q.all_animations_finished"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.choochoo_boss.walk": {
+			"states": {
+				"default": {
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"walk": "q.modified_move_speed >= 0.05"
+						}
+					]
+				},
+				"walk": {
+					"animations": [
+						{
+							"walk": "math.clamp(q.modified_move_speed*2, 0, 1)"
+						}
+					],
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"default": "q.modified_move_speed < 0.05"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.choochoo_boss.attack": {
+			"states": {
+				"default": {
+					"on_entry": ["v.choo_choo_boss_attack_choice = math.random(0, 1);"],
+					"transitions": [
+						{
+							"attack_left": "q.is_delayed_attacking && v.choo_choo_boss_attack_choice < 0.5"
+						},
+						{
+							"attack_right": "q.is_delayed_attacking"
+						},
+						{
+							"attack_steam_preparation": "q.property('shapescape:steam_attack_state') == 'steam_preparation'"
+						},
+						{
+							"attack_summon": "q.property('shapescape:summon_attack_state') == 'summon'"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"attack_left": {
+					"animations": ["attack_left"],
+					"transitions": [
+						{
+							"default": "!q.is_delayed_attacking"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"attack_right": {
+					"animations": ["attack_right"],
+					"transitions": [
+						{
+							"default": "!q.is_delayed_attacking"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"attack_steam_preparation": {
+					"transitions": [
+						{
+							"attack_steam": "q.property('shapescape:steam_attack_state') == 'steam'"
+						},
+						{
+							"default": "q.property('shapescape:steam_attack_state') != 'steam_preparation'"
+						}
+					],
+					"blend_transition": 0.1,
+					"animations": ["attack_steam_preparation"]
+				},
+				"attack_steam": {
+					"transitions": [
+						{
+							"attack_stem_reset": "q.property('shapescape:steam_attack_state') != 'steam' && q.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.1,
+					"animations": ["attack_steam"]
+				},
+				"attack_summon": {
+					"transitions": [
+						{
+							"default": "q.property('shapescape:summon_attack_state') != 'summon'"
+						}
+					],
+					"blend_transition": 0.1,
+					"animations": ["squat_of_summoning"]
+				},
+				"attack_stem_reset": {
+					"transitions": [
+						{
+							"default": "!q.is_delayed_attacking"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.choochoo_boss.steam": {
+			"states": {
+				"default": {
+					"particle_effects": [
+						{
+							"effect": "steam_chimney_venting",
+							"locator": "steam"
+						}
+					],
+					"transitions": [
+						{
+							"blast": "q.property('shapescape:steam_attack_state') == 'steam'"
+						}
+					]
+				},
+				"blast": {
+					"transitions": [
+						{
+							"default": "q.property('shapescape:steam_attack_state') != 'steam'"
+						}
+					],
+					"particle_effects": [
+						{
+							"effect": "steam_chimney_explode",
+							"locator": "steam"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.choochoo_boss.eyes_particle": {
+			"states": {
+				"default": {
+					"particle_effects": [
+						{
+							"effect": "eye",
+							"locator": "eye_left"
+						},
+						{
+							"effect": "eye",
+							"locator": "eye_right"
+						},
+						{
+							"effect": "light",
+							"locator": "light"
+						}
+					]
+				}
+			}
+		}
+	}
+}

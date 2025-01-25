@@ -1,0 +1,39 @@
+{
+	"format_version": [1, 19, 40, 1, 19, 40],
+	"shapescape:fake_wall": {
+		"isotropic": false,
+		"sound": "deepslate_bricks",
+		"textures": "cracked_deepslate_bricks"
+	},
+	"shapescape:fake_hole": {
+		"sound": "stone",
+		"textures": "coal_block"
+	},
+	"shapescape:fake_ceiling": {
+		"sound": "stone",
+		"textures": "coal_block"
+	},
+	"shapescape:fake_ceiling_1": {
+		"sound": "stone",
+		"textures": "coal_block"
+	},
+	"shapescape:fake_ceiling_2": {
+		"sound": "stone",
+		"textures": "sand"
+	},
+	"shapescape:fake_barrel": {
+		"sound": "wood",
+		"textures": {
+			"up": "barrel_top",
+			"down": "barrel_bottom",
+			"east": "barrel_side",
+			"north": "barrel_side",
+			"south": "barrel_side",
+			"west": "barrel_side"
+		}
+	},
+	"shapescape:fake_spruce_planks": {
+		"sound": "wood",
+		"textures": "spruce_planks"
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "shapescape:portal"
+		},
+		"tags": ["crafting_table"],
+		"pattern": ["SSS", "S S", "SSS"],
+		"key": {
+			"S": {
+				"item": "shapescape:spider_silk"
+			}
+		},
+		"result": {
+			"item": "shapescape:portal_spawn_egg",
+			"count": 1
+		}
+	}
+}

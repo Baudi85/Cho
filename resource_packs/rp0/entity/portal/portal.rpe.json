@@ -1,0 +1,33 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "shapescape:portal",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/portal/portal.entity"
+			},
+			"geometry": {
+				"default": "geometry.portal"
+			},
+			"scripts": {
+				"animate": ["particles"]
+			},
+			"animations": {
+				"particles": "controller.animation.portal.particle"
+			},
+			"sound_effects": {
+				"spawn": "trap_spawn"
+			},
+			"particle_effects": {
+				"portal": "shapescape:portal"
+			},
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"texture": "portal"
+			}
+		}
+	}
+}

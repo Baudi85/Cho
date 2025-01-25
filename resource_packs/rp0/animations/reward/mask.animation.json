@@ -1,0 +1,13 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.mask.hide": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"scale": 0
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.jump_scare.despawn": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"start": "1.0"
+						}
+					]
+				},
+				"start": {
+					"on_entry": ["v.jump_scare_timestamp = q.life_time;"],
+					"transitions": [
+						{
+							"tp": "v.jump_scare_timestamp + 0.3 < q.life_time"
+						}
+					]
+				},
+				"tp": {
+					"on_entry": ["/event entity @s despawn"]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,33 @@
+{
+	"format_version": "1.17.0",
+	"animation_controllers": {
+		"controller.animation.tutorial_jump_scare_player.default": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"default_s0": "1.0"
+						}
+					]
+				},
+				"end": {
+					"on_entry": [
+						"@s despawn"
+					]
+				},
+				"default_s0": {
+					"transitions": [
+						{
+							"end": "q.all_animations_finished"
+						}
+					],
+					"animations": [
+						"tutorial_jump_scare_player.default_s0_0",
+						"tutorial_jump_scare_player.default_s0_1"
+					]
+				}
+			}
+		}
+	}
+}

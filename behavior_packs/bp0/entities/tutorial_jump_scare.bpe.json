@@ -1,0 +1,76 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "camera:tutorial_jump_scare",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"animations": {
+				"tutorial_jump_scare.default_s0_0": "animation.tutorial_jump_scare.default_s0_0",
+				"tutorial_jump_scare.default_s1_0": "animation.tutorial_jump_scare.default_s1_0",
+				"tutorial_jump_scare.default_s1_1": "animation.tutorial_jump_scare.default_s1_1",
+				"tutorial_jump_scare.default_s2_0": "animation.tutorial_jump_scare.default_s2_0",
+				"tutorial_jump_scare.default_controller": "controller.animation.tutorial_jump_scare.default"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"tutorial_jump_scare.default_controller": "q.variant == 0"
+					}
+				]
+			}
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"tutorial_jump_scare.default": {
+				"minecraft:variant": {
+					"value": 0
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"cutscene"
+				]
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:knockback_resistance": {
+				"value": 0
+			}
+		},
+		"events": {
+			"despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			},
+			"tutorial_jump_scare.default": {
+				"add": {
+					"component_groups": [
+						"tutorial_jump_scare.default"
+					]
+				}
+			}
+		}
+	}
+}

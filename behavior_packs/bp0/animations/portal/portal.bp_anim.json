@@ -1,0 +1,19 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.portal.look_for_player": {
+			"loop": true,
+			"animation_length": 0.1,
+			"timeline": {
+				"0.0": ["/function portal/look_for_player"]
+			}
+		},
+		"animation.portal.ambient_sound": {
+			"loop": true,
+			"animation_length": 5,
+			"timeline": {
+				"0.0": ["/playsound portal.portal @a ~ ~ ~ 1  1 0"]
+			}
+		}
+	}
+}

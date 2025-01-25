@@ -1,0 +1,28 @@
+{
+	"format_version": "1.17.0",
+	"animation_controllers": {
+		"controller.animation.portal.init_transformations": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"initializing": "q.is_baby"
+						}
+					]
+				},
+				"initializing": {
+					"on_entry": ["/tag @e[type=shapescape:portal] add to_despawn", "/tag @s remove to_despawn", "/event entity @e[tag=to_despawn] despawn", "/tickingarea remove portal", "/tickingarea add circle ~ ~ ~ 1 portal", "@s remove_test_placement"],
+					"transitions": [
+						{
+							"initialized": "1.0"
+						}
+					]
+				},
+				"initialized": {
+					"on_entry": []
+				}
+			}
+		}
+	}
+}

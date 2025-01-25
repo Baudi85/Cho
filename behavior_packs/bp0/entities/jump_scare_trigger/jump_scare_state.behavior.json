@@ -1,0 +1,96 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "shapescape:jump_scare_state",
+			"is_experimental": false,
+			"is_spawnable": false,
+			"is_summonable": true,
+			"properties": {
+				"shapescape:jump_scare_trigger_state": {
+					"type": "enum",
+					"default": "disabled",
+					"values": [
+						"disabled",
+						"cooldown",
+						"build_tension",
+						"jump_scare"
+					]
+				}
+			},
+			"animations": {
+				"main_controller": "controller.animation.jump_scare_state.main",
+				"jump_sacre_trigger_cooldown_loop": "animation.jump_scare_state.jump_sacre_trigger_cooldown_loop",
+				"jump_sacre_trigger_tension_loop": "animation.jump_scare_state.jump_sacre_trigger_tension_loop"
+			},
+			"scripts": {
+				"animate": [
+					"main_controller"
+				]
+			}
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"height": 0,
+				"width": 0
+			},
+			"minecraft:health": {
+				"max": 1000,
+				"value": 1000
+			},
+			"minecraft:knockback_resistance": {
+				"max": 1,
+				"value": 1
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			}
+		},
+		"events": {
+			"despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			},
+			"jump_scare_trigger_state_disabled": {
+				"set_property": {
+					"shapescape:jump_scare_trigger_state": "disabled"
+				}
+			},
+			"jump_scare_trigger_state_cooldown": {
+				"set_property": {
+					"shapescape:jump_scare_trigger_state": "cooldown"
+				}
+			},
+			"jump_scare_trigger_state_build_tension": {
+				"set_property": {
+					"shapescape:jump_scare_trigger_state": "build_tension"
+				}
+			},
+			"jump_scare_trigger_state_jump_scare": {
+				"set_property": {
+					"shapescape:jump_scare_trigger_state": "jump_scare"
+				}
+			}
+		}
+	}
+}

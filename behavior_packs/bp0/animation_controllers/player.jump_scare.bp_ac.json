@@ -1,0 +1,230 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.player.jump_scare_damage": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"take_damage_0": "q.property('shapescape:jump_scare_damage') == true && q.health == 0"
+						},
+						{
+							"take_damage_0": "q.property('shapescape:jump_scare_damage') == true && q.health == 1"
+						},
+						{
+							"take_damage_0": "q.property('shapescape:jump_scare_damage') == true && q.health == 2"
+						},
+						{
+							"take_damage_1": "q.property('shapescape:jump_scare_damage') == true && q.health == 3"
+						},
+						{
+							"take_damage_2": "q.property('shapescape:jump_scare_damage') == true && q.health == 4"
+						},
+						{
+							"take_damage_3": "q.property('shapescape:jump_scare_damage') == true && q.health == 5"
+						},
+						{
+							"take_damage_4": "q.property('shapescape:jump_scare_damage') == true && q.health == 6"
+						},
+						{
+							"take_damage_5": "q.property('shapescape:jump_scare_damage') == true && q.health == 7"
+						},
+						{
+							"take_damage_6": "q.property('shapescape:jump_scare_damage') == true && q.health == 8"
+						},
+						{
+							"take_damage_7": "q.property('shapescape:jump_scare_damage') == true && q.health == 9"
+						},
+						{
+							"take_damage_8": "q.property('shapescape:jump_scare_damage') == true && q.health == 10"
+						},
+						{
+							"take_damage_9": "q.property('shapescape:jump_scare_damage') == true && q.health == 11"
+						},
+						{
+							"take_damage_10": "q.property('shapescape:jump_scare_damage') == true && q.health == 12"
+						},
+						{
+							"take_damage_11": "q.property('shapescape:jump_scare_damage') == true && q.health == 13"
+						},
+						{
+							"take_damage_12": "q.property('shapescape:jump_scare_damage') == true && q.health == 14"
+						},
+						{
+							"take_damage_13": "q.property('shapescape:jump_scare_damage') == true && q.health == 15"
+						},
+						{
+							"take_damage_14": "q.property('shapescape:jump_scare_damage') == true && q.health == 16"
+						},
+						{
+							"take_damage_15": "q.property('shapescape:jump_scare_damage') == true && q.health == 17"
+						},
+						{
+							"take_damage_16": "q.property('shapescape:jump_scare_damage') == true && q.health == 18"
+						},
+						{
+							"take_damage_17": "q.property('shapescape:jump_scare_damage') == true && q.health == 19"
+						},
+						{
+							"take_damage_18": "q.property('shapescape:jump_scare_damage') == true && q.health == 20"
+						}
+					],
+					"on_entry": ["@s remove_jump_scare_damage"]
+				},
+				"take_damage_0": {
+					"on_entry": [],
+					"transitions": [
+						{
+							"default": "1.0"
+						}
+					]
+				},
+				"take_damage_1": {
+					"on_entry": ["@s remove_jump_scare_damage", "/effect @s resistance 5 10 true", "/damage @s 1 starve"],
+					"transitions": [
+						{
+							"default": "1.0"
+						}
+					]
+				},
+				"take_damage_2": {
+					"on_entry": ["@s remove_jump_scare_damage", "/effect @s resistance 5 10 true", "/damage @s 2 starve"],
+					"transitions": [
+						{
+							"default": "1.0"
+						}
+					]
+				},
+				"take_damage_3": {
+					"on_entry": ["@s remove_jump_scare_damage", "/effect @s resistance 5 10 true", "/damage @s 3 starve"],
+					"transitions": [
+						{
+							"default": "1.0"
+						}
+					]
+				},
+				"take_damage_4": {
+					"on_entry": ["@s remove_jump_scare_damage", "/effect @s resistance 5 10 true", "/damage @s 4 starve"],
+					"transitions": [
+						{
+							"default": "1.0"
+						}
+					]
+				},
+				"take_damage_5": {
+					"on_entry": ["@s remove_jump_scare_damage", "/effect @s resistance 5 10 true", "/damage @s 5 starve"],
+					"transitions": [
+						{
+							"default": "1.0"
+						}
+					]
+				},
+				"take_damage_6": {
+					"on_entry": ["@s remove_jump_scare_damage", "/effect @s resistance 5 10 true", "/damage @s 6 starve"],
+					"transitions": [
+						{
+							"default": "1.0"
+						}
+					]
+				},
+				"take_damage_7": {
+					"on_entry": ["@s remove_jump_scare_damage", "/effect @s resistance 5 10 true", "/damage @s 7 starve"],
+					"transitions": [
+						{
+							"default": "1.0"
+						}
+					]
+				},
+				"take_damage_8": {
+					"on_entry": ["@s remove_jump_scare_damage", "/effect @s resistance 5 10 true", "/damage @s 8 starve"],
+					"transitions": [
+						{
+							"default": "1.0"
+						}
+					]
+				},
+				"take_damage_9": {
+					"on_entry": ["@s remove_jump_scare_damage", "/effect @s resistance 5 10 true", "/damage @s 9 starve"],
+					"transitions": [
+						{
+							"default": "1.0"
+						}
+					]
+				},
+				"take_damage_10": {
+					"on_entry": ["@s remove_jump_scare_damage", "/effect @s resistance 5 10 true", "/damage @s 10 starve"],
+					"transitions": [
+						{
+							"default": "1.0"
+						}
+					]
+				},
+				"take_damage_11": {
+					"on_entry": ["@s remove_jump_scare_damage", "/effect @s resistance 5 10 true", "/damage @s 11 starve"],
+					"transitions": [
+						{
+							"default": "1.0"
+						}
+					]
+				},
+				"take_damage_12": {
+					"on_entry": ["@s remove_jump_scare_damage", "/effect @s resistance 5 10 true", "/damage @s 12 starve"],
+					"transitions": [
+						{
+							"default": "1.0"
+						}
+					]
+				},
+				"take_damage_13": {
+					"on_entry": ["@s remove_jump_scare_damage", "/effect @s resistance 5 10 true", "/damage @s 13 starve"],
+					"transitions": [
+						{
+							"default": "1.0"
+						}
+					]
+				},
+				"take_damage_14": {
+					"on_entry": ["@s remove_jump_scare_damage", "/effect @s resistance 5 10 true", "/damage @s 14 starve"],
+					"transitions": [
+						{
+							"default": "1.0"
+						}
+					]
+				},
+				"take_damage_15": {
+					"on_entry": ["@s remove_jump_scare_damage", "/effect @s resistance 5 10 true", "/damage @s 15 starve"],
+					"transitions": [
+						{
+							"default": "1.0"
+						}
+					]
+				},
+				"take_damage_16": {
+					"on_entry": ["@s remove_jump_scare_damage", "/effect @s resistance 5 10 true", "/damage @s 16 starve"],
+					"transitions": [
+						{
+							"default": "1.0"
+						}
+					]
+				},
+				"take_damage_17": {
+					"on_entry": ["@s remove_jump_scare_damage", "/effect @s resistance 5 10 true", "/damage @s 17 starve"],
+					"transitions": [
+						{
+							"default": "1.0"
+						}
+					]
+				},
+				"take_damage_18": {
+					"on_entry": ["@s remove_jump_scare_damage", "/effect @s resistance 5 10 true", "/damage @s 18 starve"],
+					"transitions": [
+						{
+							"default": "1.0"
+						}
+					]
+				}
+			}
+		}
+	}
+}

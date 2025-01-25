@@ -1,0 +1,76 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "camera:boss_arena_start",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"animations": {
+				"boss_arena_start.default_s0_0": "animation.boss_arena_start.default_s0_0",
+				"boss_arena_start.default_s0_1": "animation.boss_arena_start.default_s0_1",
+				"boss_arena_start.default_s1_0": "animation.boss_arena_start.default_s1_0",
+				"boss_arena_start.default_s1_1": "animation.boss_arena_start.default_s1_1",
+				"boss_arena_start.default_controller": "controller.animation.boss_arena_start.default"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"boss_arena_start.default_controller": "q.variant == 0"
+					}
+				]
+			}
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"boss_arena_start.default": {
+				"minecraft:variant": {
+					"value": 0
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"cutscene"
+				]
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:knockback_resistance": {
+				"value": 0
+			}
+		},
+		"events": {
+			"despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			},
+			"boss_arena_start.default": {
+				"add": {
+					"component_groups": [
+						"boss_arena_start.default"
+					]
+				}
+			}
+		}
+	}
+}

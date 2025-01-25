@@ -1,0 +1,86 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.player.mask_equipment": {
+			"states": {
+				"default": {
+					"on_entry": [],
+					"transitions": [
+						{
+							"equip": "(q.is_item_name_any('slot.weapon.mainhand', 0, 'shapescape:mask') && !query.has_armor_slot(0) && q.is_using_item) || q.is_item_name_any('slot.armor.head', 0, 'shapescape:mask_attachable')"
+						},
+						{
+							"helmet_message": "q.is_item_name_any('slot.weapon.mainhand', 0, 'shapescape:mask') && query.has_armor_slot(0) && q.is_using_item"
+						}
+					]
+				},
+				"helmet_message": {
+					"on_entry": ["v.helmet_message_cooldown = q.life_time;", "/tellraw @s {\"rawtext\":[{\"translate\":\"actionbar.tip.helmet_message\"}]}", "/playsound note.bass @s"],
+					"transitions": [
+						{
+							"default": "v.helmet_message_cooldown + 0.1 < q.life_time"
+						}
+					]
+				},
+				"equip": {
+					"on_entry": ["/replaceitem entity @s slot.armor.head 0 shapescape:mask_attachable 1 0", "/clear @s shapescape:mask", "/playsound armor.equip_leather @s ~~~ 1 2"],
+					"transitions": [
+						{
+							"equipped": "1.0"
+						}
+					]
+				},
+				"equipped": {
+					"transitions": [
+						{
+							"give_back_item": "!q.is_item_name_any('slot.armor.head', 0, 'shapescape:mask_attachable')"
+						}
+					]
+				},
+				"give_back_item": {
+					"on_entry": ["/give @s shapescape:mask", "/clear @s shapescape:mask_attachable"],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.mask_effects": {
+			"states": {
+				"default": {
+					"on_entry": [],
+					"transitions": [
+						{
+							"mask_equipped": "q.is_item_name_any('slot.armor.head', 0, 'shapescape:mask_attachable')"
+						}
+					]
+				},
+				"mask_equipped": {
+					"on_entry": [],
+					"transitions": [
+						{
+							"default": "!q.is_item_name_any('slot.armor.head', 0, 'shapescape:mask_attachable')"
+						},
+						{
+							"mask_equipped_sneak": "q.is_item_name_any('slot.armor.head', 0, 'shapescape:mask_attachable') && q.is_sneaking"
+						}
+					]
+				},
+				"mask_equipped_sneak": {
+					"on_entry": ["v.mask_sneak_leave_state_cooldown = q.life_time;", "/playsound reward.mask_sound @a[r=10]", "/tag @s add mask_push", "/summon shapescape:mask_push ~~~", "/particle shapescape:mask_explosion"],
+					"on_exit": ["/tag @s remove mask_push"],
+					"transitions": [
+						{
+							"default": "!q.is_item_name_any('slot.armor.head', 0, 'shapescape:mask_attachable')"
+						},
+						{
+							"mask_equipped": "!q.is_sneaking && v.mask_sneak_leave_state_cooldown + 1 < q.life_time"
+						}
+					]
+				}
+			}
+		}
+	}
+}

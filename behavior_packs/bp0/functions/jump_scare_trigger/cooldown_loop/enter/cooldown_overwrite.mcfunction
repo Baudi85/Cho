@@ -1,0 +1,2 @@
+scoreboard players operation JUMP_SCARE_TRIGGER_TICK tmp_var = JUMP_SCARE_COOLDOWN_TICK_OVERWRITE tmp_var
+scoreboard players set JUMP_SCARE_COOLDOWN_TICK_OVERWRITE tmp_var 0

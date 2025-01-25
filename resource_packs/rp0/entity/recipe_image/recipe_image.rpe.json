@@ -1,0 +1,23 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "shapescape:recipe_image",
+			"spawn_egg": {
+				"base_color": "#91221a",
+				"overlay_color": "#91221a"
+			},
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"render_controllers": ["controller.render.recipe_image"],
+			"geometry": {
+				"default": "geometry.recipe_image"
+			},
+			"textures": {
+				"spider_silk": "textures/entity/recipe_image/spider_silk_entity",
+				"portal": "textures/entity/recipe_image/portal_entity"
+			}
+		}
+	}
+}

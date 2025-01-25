@@ -1,0 +1,60 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "shapescape:choochoo_boss_idle",
+			"materials": {
+				"default": "entity_emissive_alpha",
+				"light": "choochoo_light"
+			},
+			"textures": {
+				"default": "textures/entity/boss/choochoo_boss_entity"
+			},
+			"geometry": {
+				"default": "geometry.choochoo_boss"
+			},
+			"animations": {
+				"walk_controller": "controller.animation.choochoo_boss.walk",
+				"attack_controller": "controller.animation.choochoo_boss.attack",
+				"face_controller": "controller.animation.choochoo_boss.face",
+				"steam_controller": "controller.animation.choochoo_boss.steam",
+				"eye_particles": "controller.animation.choochoo_boss.eyes_particle",
+				"light_particle": "controller.animation.choochoo_boss.light_particle",
+				"walk": "animation.choochoo_boss.walk",
+				"rotation_dumping": "animation.choochoo_boss.rotation_dumping",
+				"attack_left": "animation.choochoo_boss.attack_left",
+				"attack_right": "animation.choochoo_boss.attack_right",
+				"attack_steam": "animation.choochoo_boss.attack_steam",
+				"attack_steam_preparation": "animation.choochoo_boss.attack_steam_preparation",
+				"head_rotation": "animation.choochoo_boss.head_rotation",
+				"head_rotation_cutscene": "animation.choochoo_boss.head_rotation_cutscene",
+				"random_look": "animation.choochoo_boss.random_look",
+				"look_at_target": "animation.choochoo_boss.look_at_target",
+				"squat_of_summoning": "animation.choochoo_boss.squat_of_summoning",
+				"tutorial": "animation.choochoo_boss.tutorial"
+			},
+			"sound_effects": {
+				"rotation_clunk": "boss.rotation_clunk",
+				"rotation_clunk_cutscene": "boss.rotation_clunk_cutscene",
+				"attack_steam_preparation": "boss.attack_steam_preparation",
+				"attack_steam_release": "boss.attack_steam_release",
+				"attack_swoop": "boss.attack_swoop",
+				"squat_of_summoning": "boss.squat_of_summoning"
+			},
+			"particle_effects": {
+				"steam_chimney_venting": "shapescape:steam_chimney_venting",
+				"steam_chimney_explode": "shapescape:steam_chimney_explode",
+				"eye": "shapescape:glowing_eye",
+				"light": "shapescape:glowing_light"
+			},
+			"scripts": {
+				"animate": ["attack_controller", "rotation_dumping", "walk_controller", "face_controller", "steam_controller", "eye_particles"]
+			},
+			"render_controllers": ["controller.render.choochoo_boss"],
+			"spawn_egg": {
+				"base_color": "#288483",
+				"overlay_color": "#2B7135"
+			}
+		}
+	}
+}

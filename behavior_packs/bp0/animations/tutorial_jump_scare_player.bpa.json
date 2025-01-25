@@ -1,0 +1,28 @@
+{
+	"format_version": "1.18.0",
+	"animations": {
+		"animation.tutorial_jump_scare_player.default_s0_0": {
+			"loop": false,
+			"animation_length": 0.2,
+			"timeline": {
+				"0.0": [
+					"/tp @a 133.00 -16.50 -289.50 -90.00 0.00"
+				],
+				"0.025": [
+					"/tp @a 132.50 -16.33 -289.50 -90.00 0.00"
+				],
+				"0.05": [
+					"/tp @a 132.00 -16.17 -289.50 -90.00 0.00"
+				],
+				"0.1": [
+					"/tp @a 131.50 -16.00 -289.50 -90.00 0.00"
+				]
+			}
+		},
+		"animation.tutorial_jump_scare_player.default_s0_1": {
+			"loop": false,
+			"animation_length": 0.2,
+			"timeline": {}
+		}
+	}
+}

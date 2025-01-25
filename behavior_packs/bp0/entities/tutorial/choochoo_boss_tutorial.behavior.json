@@ -1,0 +1,120 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "shapescape:choochoo_boss_tutorial",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"properties": {
+				"shapescape:steam_attack_state": {
+					"type": "enum",
+					"values": [
+						"default",
+						"cooldown",
+						"steam_preparation",
+						"steam"
+					],
+					"default": "default",
+					"client_sync": true
+				},
+				"shapescape:summon_attack_state": {
+					"type": "enum",
+					"values": [
+						"default",
+						"cooldown",
+						"summon"
+					],
+					"default": "default",
+					"client_sync": true
+				}
+			},
+			"animations": {
+				"detect_player": "animation.tutorial.detect_player"
+			},
+			"scripts": {
+				"animate": [
+					"detect_player"
+				]
+			}
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"choochoo_boss"
+				]
+			},
+			"minecraft:movement": {
+				"value": 0.45
+			},
+			"minecraft:collision_box": {
+				"width": 3,
+				"height": 5
+			},
+			"minecraft:custom_hit_test": {
+				"hitboxes": [
+					{
+						"width": 6,
+						"height": 5,
+						"pivot": [
+							0,
+							2.5,
+							0
+						]
+					}
+				]
+			},
+			"minecraft:health": {
+				"value": 20,
+				"max": 20
+			},
+			"minecraft:rideable": {
+				"controlling_seat": 0,
+				"crouching_skip_interact": true,
+				"family_types": [
+					"choochoo_breaker"
+				],
+				"interact_text": "",
+				"pull_in_entities": false,
+				"rider_can_interact": false,
+				"seat_count": 1,
+				"seats": [
+					{
+						"position": [
+							0,
+							0,
+							0
+						]
+					}
+				]
+			},
+			"minecraft:addrider": {
+				"entity_type": "shapescape:choochoo_tutorial_breaker"
+			},
+			"minecraft:attack": {
+				"damage": 3
+			},
+			"minecraft:despawn": {
+				"despawn_from_distance": {}
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			}
+		},
+		"events": {
+			"despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			}
+		}
+	}
+}

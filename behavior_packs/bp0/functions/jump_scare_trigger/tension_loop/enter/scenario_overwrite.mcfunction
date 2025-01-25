@@ -1,0 +1,2 @@
+scoreboard players operation JUMP_SCARE_SCENARIO tmp_var = JUMP_SCARE_SCENARIO_OVERRIDE tmp_var
+scoreboard players set JUMP_SCARE_SCENARIO_OVERRIDE tmp_var -1

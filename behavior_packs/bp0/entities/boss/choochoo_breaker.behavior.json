@@ -1,0 +1,91 @@
+{
+	"format_version": "1.17.20",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "shapescape:choochoo_breaker",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 10,
+				"height": 5
+			},
+			"minecraft:type_family": {
+				"family": [
+					"choochoo_breaker"
+				]
+			},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"event": "despawn",
+						"target": "self",
+						"filters": {
+							"test": "is_riding",
+							"subject": "self",
+							"value": false
+						}
+					}
+				]
+			},
+			"minecraft:custom_hit_test": {
+				"hitboxes": [
+					{
+						"width": 0,
+						"height": 0,
+						"pivot": [
+							0,
+							0,
+							0
+						]
+					}
+				]
+			},
+			"minecraft:break_blocks": {
+				"breakable_blocks": [
+					"fake_barrel",
+					"fake_spruce_planks"
+				]
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:physics": {}
+		},
+		"events": {
+			"despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			},
+			"attack_state_default": {
+				"set_property": {
+					"shapescape:steam_attack_state": "default"
+				}
+			},
+			"attack_state_steam_preparation": {
+				"set_property": {
+					"shapescape:steam_attack_state": "steam_preparation"
+				}
+			},
+			"attack_state_steam": {
+				"set_property": {
+					"shapescape:steam_attack_state": "steam"
+				}
+			}
+		}
+	}
+}

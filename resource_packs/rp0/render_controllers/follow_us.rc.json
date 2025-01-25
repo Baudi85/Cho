@@ -1,0 +1,82 @@
+{
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.follow_us": {
+			"geometry": "Geometry.default",
+			"filter_lighting": true,
+			"materials": [{ "*": "Material.triple" }],
+			"textures": ["Texture.background", "Texture.background", "Texture.frame"]
+		},
+		"controller.render.follow_us_text": {
+			"geometry": "Geometry.default",
+			"filter_lighting": true,
+			"materials": [{ "*": "Material.single" }],
+			"textures": ["Array.skins[query.life_time * 20]"],
+			"arrays": {
+				"textures": {
+					"Array.skins": [
+						"Texture.f00",
+						"Texture.f01",
+						"Texture.f02",
+						"Texture.f03",
+						"Texture.f04",
+						"Texture.f05",
+						"Texture.f06",
+						"Texture.f07",
+						"Texture.f08",
+						"Texture.f09",
+						"Texture.f10",
+						"Texture.f11",
+						"Texture.f12",
+						"Texture.f13",
+						"Texture.f14",
+						"Texture.f15",
+						"Texture.f16",
+						"Texture.f17",
+						"Texture.f18",
+						"Texture.f19",
+						"Texture.f20",
+						"Texture.f21",
+						"Texture.f22",
+						"Texture.f23",
+						"Texture.f24",
+						"Texture.f25",
+						"Texture.f26",
+						"Texture.f27",
+						"Texture.f28",
+						"Texture.f29",
+						"Texture.f30",
+						"Texture.f31",
+						"Texture.f32",
+						"Texture.f33",
+						"Texture.f34",
+						"Texture.f35",
+						"Texture.f36",
+						"Texture.f37",
+						"Texture.f38",
+						"Texture.f39",
+						"Texture.f40",
+						"Texture.f41",
+						"Texture.f42",
+						"Texture.f43",
+						"Texture.f44",
+						"Texture.f45",
+						"Texture.f46",
+						"Texture.f47",
+						"Texture.f48",
+						"Texture.f49",
+						"Texture.f50",
+						"Texture.f51",
+						"Texture.f52",
+						"Texture.f53",
+						"Texture.f54",
+						"Texture.f55",
+						"Texture.f56",
+						"Texture.f57",
+						"Texture.f58"
+					]
+				}
+			}
+		}
+	}
+}

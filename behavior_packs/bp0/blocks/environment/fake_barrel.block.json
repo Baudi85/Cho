@@ -1,0 +1,32 @@
+{
+	"format_version": "1.19.60",
+	"minecraft:block": {
+		"description": {
+			"identifier": "shapescape:fake_barrel"
+		},
+		"components": {
+			"minecraft:loot": "loot_tables/environment/fake_block_empty.loot.json",
+			"minecraft:collision_box": {
+				"origin": [-8.0, 0.0, -8.0],
+				"size": [16.0, 16.0, 16.0]
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 2147483647
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 151200
+			},
+			"minecraft:flammable": {
+				"catch_chance_modifier": 0,
+				"destroy_chance_modifier": 0
+			},
+			"minecraft:friction": 0.4,
+			"minecraft:light_dampening": 1,
+			"minecraft:light_emission": 0,
+			"minecraft:selection_box": {
+				"origin": [-8.0, 0.0, -8.0],
+				"size": [16.0, 16.0, 16.0]
+			}
+		}
+	}
+}

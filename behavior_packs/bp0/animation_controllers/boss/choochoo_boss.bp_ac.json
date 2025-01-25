@@ -1,0 +1,118 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.choochoo_boss.steam_attack": {
+			"initial_state": "start",
+			"states": {
+				"start": {
+					"transitions": [
+						{
+							"default": "q.property('shapescape:steam_attack_state') == 'default'"
+						},
+						{
+							"cooldown": "q.property('shapescape:steam_attack_state') == 'cooldown'"
+						},
+						{
+							"steam_preparation": "q.property('shapescape:steam_attack_state') == 'steam_preparation'"
+						},
+						{
+							"steam": "q.property('shapescape:steam_attack_state') == 'steam'"
+						}
+					]
+				},
+				"default": {
+					"on_entry": ["@s steam_attack_state_default"],
+					"transitions": [
+						{
+							"steam_preparation": "q.property('shapescape:steam_attack_state') == 'steam_preparation'"
+						}
+					]
+				},
+				"cooldown": {
+					"on_entry": ["v.steam_attack_timestamp = query.life_time;", "@s steam_attack_state_cooldown"],
+					"transitions": [
+						{
+							"default": "v.steam_attack_timestamp + 10 < q.life_time"
+						}
+					]
+				},
+				"steam_preparation": {
+					"on_entry": ["v.steam_attack_timestamp = query.life_time;", "/effect @s slowness 3 10 true", "/particle shapescape:steam_venting ~ ~3 ~", "/stopsound @a boss.attack_swoop"],
+					"animations": ["stop_swoop_sound"],
+					"transitions": [
+						{
+							"steam": "v.steam_attack_timestamp + 2.55 < q.life_time"
+						}
+					]
+				},
+				"steam": {
+					"on_entry": ["v.steam_attack_timestamp = query.life_time;", "@s steam_attack_state_steam"],
+					"on_exit": ["/summon shapescape:choochoo_push ~ ~ ~", "/particle shapescape:steam_explosion ~ ~3 ~"],
+					"transitions": [
+						{
+							"cooldown": "v.steam_attack_timestamp + 0.1 < q.life_time"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.choochoo_boss.summon_attack": {
+			"initial_state": "start",
+			"states": {
+				"start": {
+					"transitions": [
+						{
+							"default": "q.property('shapescape:summon_attack_state') == 'default'"
+						},
+						{
+							"cooldown": "q.property('shapescape:summon_attack_state') == 'cooldown'"
+						},
+						{
+							"summon": "q.property('shapescape:summon_attack_state') == 'summon'"
+						}
+					]
+				},
+				"default": {
+					"on_entry": ["@s summon_attack_state_default"],
+					"transitions": [
+						{
+							"summon": "q.property('shapescape:summon_attack_state') == 'summon'"
+						}
+					]
+				},
+				"cooldown": {
+					"on_entry": ["v.summon_attack_timestamp = query.life_time;", "@s summon_attack_state_cooldown"],
+					"transitions": [
+						{
+							"default": "v.summon_attack_timestamp + 25 < q.life_time"
+						}
+					]
+				},
+				"summon": {
+					"on_entry": ["v.summon_attack_timestamp = query.life_time;", "/effect @s slowness 3 10 true", "/stopsound @a boss.attack_swoop"],
+					"animations": ["stop_swoop_sound", "squat_of_summoning"],
+					"transitions": [
+						{
+							"cooldown": "v.summon_attack_timestamp + 3 < q.life_time"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.choochoo_boss.death": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"dead": "q.health <= 1"
+						}
+					]
+				},
+				"dead": {
+					"on_entry": ["@s dead"]
+				}
+			}
+		}
+	}
+}

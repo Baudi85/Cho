@@ -1,0 +1,25 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.arena.particles": {
+			"states": {
+				"default": {
+					"particle_effects": [
+						{
+							"effect": "dust",
+							"locator": "dust"
+						},
+						{
+							"effect": "wide_ray",
+							"locator": "wide_ray"
+						},
+						{
+							"effect": "floor_fog",
+							"locator": "floor_fog"
+						}
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,89 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.jump_scare_state.main": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"disabled": "q.property('shapescape:jump_scare_trigger_state') == 'disabled'"
+						},
+						{
+							"cooldown": "q.property('shapescape:jump_scare_trigger_state') == 'cooldown'"
+						},
+						{
+							"build_tension": "q.property('shapescape:jump_scare_trigger_state') == 'build_tension'"
+						},
+						{
+							"reset_system": "q.property('shapescape:jump_scare_trigger_state') == 'jump_scare'"
+						}
+					]
+				},
+				"disabled": {
+					"transitions": [
+						{
+							"trs_cooldown": "q.property('shapescape:jump_scare_trigger_state') == 'cooldown'"
+						},
+						{
+							"build_tension": "q.property('shapescape:jump_scare_trigger_state') == 'build_tension'"
+						},
+						{
+							"reset_system": "q.property('shapescape:jump_scare_trigger_state') == 'jump_scare'"
+						}
+					]
+				},
+				"reset_system": {
+					"on_entry": ["/function jump_scare_trigger/reset_system"]
+				},
+				"trs_cooldown": {
+					"on_entry": ["/function jump_scare_trigger/cooldown_loop/enter"],
+					"transitions": [
+						{
+							"disabled": "q.property('shapescape:jump_scare_trigger_state') == 'disabled'"
+						},
+						{
+							"cooldown": "1.0"
+						}
+					]
+				},
+				"cooldown": {
+					"animations": ["jump_sacre_trigger_cooldown_loop"],
+					"transitions": [
+						{
+							"disabled": "q.property('shapescape:jump_scare_trigger_state') == 'disabled'"
+						},
+						{
+							"build_tension": "q.property('shapescape:jump_scare_trigger_state') == 'build_tension'"
+						}
+					]
+				},
+				"build_tension": {
+					"on_entry": ["/function jump_scare_trigger/tension_loop/enter"],
+					"animations": ["jump_sacre_trigger_tension_loop"],
+					"transitions": [
+						{
+							"disabled": "q.property('shapescape:jump_scare_trigger_state') == 'disabled'"
+						},
+						{
+							"jump_scare": "q.property('shapescape:jump_scare_trigger_state') == 'jump_scare'"
+						},
+						{
+							"trs_cooldown": "q.property('shapescape:jump_scare_trigger_state') == 'cooldown'"
+						}
+					]
+				},
+				"jump_scare": {
+					"on_entry": ["/function jump_scare_trigger/jump_scare/enter"],
+					"transitions": [
+						{
+							"disabled": "q.property('shapescape:jump_scare_trigger_state') == 'disabled'"
+						},
+						{
+							"trs_cooldown": "1.0"
+						}
+					]
+				}
+			}
+		}
+	}
+}

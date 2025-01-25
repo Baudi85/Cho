@@ -1,0 +1,105 @@
+{
+	"format_version": "1.17.20",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "shapescape:jump_scare",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"despawn_controller": "controller.animation.jump_scare.despawn"
+			},
+			"scripts": {
+				"animate": [
+					"despawn_controller"
+				]
+			}
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"zp": {
+				"minecraft:variant": {
+					"value": 0
+				}
+			},
+			"xm": {
+				"minecraft:variant": {
+					"value": 1
+				}
+			},
+			"zm": {
+				"minecraft:variant": {
+					"value": 2
+				}
+			},
+			"xp": {
+				"minecraft:variant": {
+					"value": 3
+				}
+			}
+		},
+		"components": {
+			"minecraft:movement": {
+				"value": 0.0
+			},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			},
+			"minecraft:health": {
+				"value": 99999,
+				"max": 99999
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:physics": {}
+		},
+		"events": {
+			"despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			},
+			"zp": {
+				"add": {
+					"component_groups": [
+						"zp"
+					]
+				}
+			},
+			"xm": {
+				"add": {
+					"component_groups": [
+						"xm"
+					]
+				}
+			},
+			"zm": {
+				"add": {
+					"component_groups": [
+						"zm"
+					]
+				}
+			},
+			"xp": {
+				"add": {
+					"component_groups": [
+						"xp"
+					]
+				}
+			}
+		}
+	}
+}

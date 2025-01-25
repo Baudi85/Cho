@@ -1,0 +1,19 @@
+{
+	"format_version": "1.19.0",
+	"animations": {
+		"animation.jump_scare_state.jump_sacre_trigger_cooldown_loop": {
+			"loop": true,
+			"animation_length": 1,
+			"timeline": {
+				"0.5": ["/function jump_scare_trigger/cooldown_loop/tick"]
+			}
+		},
+		"animation.jump_scare_state.jump_sacre_trigger_tension_loop": {
+			"loop": true,
+			"animation_length": 1,
+			"timeline": {
+				"0.5": ["/function jump_scare_trigger/tension_loop/tick"]
+			}
+		}
+	}
+}

@@ -1,0 +1,1 @@
+scoreboard players set JUMP_SCARE_TRIGGER_TICK tmp_var 48

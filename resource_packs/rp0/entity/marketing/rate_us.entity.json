@@ -1,0 +1,88 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "shapescape:marketing_rate_us",
+			"spawn_egg": {
+				"base_color": "#91221a",
+				"overlay_color": "#91221a"
+			},
+			"materials": {
+				"single": "entity_alphatest",
+				"double": "villager_v2_masked",
+				"triple": "entity_multitexture_alpha_test",
+				"anim": "charged_creeper"
+			},
+			"render_controllers": [
+				"controller.render.follow_us_text",
+				"controller.render.follow_us"
+			],
+			"geometry": {
+				"default": "geometry.marketing"
+			},
+			"textures": {
+				"frame": "textures/entity/marketing/frame/frame",
+				"background": "textures/entity/marketing/background/background4",
+				"f00": "textures/entity/marketing/rate_us/text/00",
+				"f01": "textures/entity/marketing/rate_us/text/01",
+				"f02": "textures/entity/marketing/rate_us/text/02",
+				"f03": "textures/entity/marketing/rate_us/text/03",
+				"f04": "textures/entity/marketing/rate_us/text/04",
+				"f05": "textures/entity/marketing/rate_us/text/05",
+				"f06": "textures/entity/marketing/rate_us/text/06",
+				"f07": "textures/entity/marketing/rate_us/text/07",
+				"f08": "textures/entity/marketing/rate_us/text/08",
+				"f09": "textures/entity/marketing/rate_us/text/09",
+				"f10": "textures/entity/marketing/rate_us/text/10",
+				"f11": "textures/entity/marketing/rate_us/text/11",
+				"f12": "textures/entity/marketing/rate_us/text/12",
+				"f13": "textures/entity/marketing/rate_us/text/13",
+				"f14": "textures/entity/marketing/rate_us/text/14",
+				"f15": "textures/entity/marketing/rate_us/text/15",
+				"f16": "textures/entity/marketing/rate_us/text/16",
+				"f17": "textures/entity/marketing/rate_us/text/17",
+				"f18": "textures/entity/marketing/rate_us/text/18",
+				"f19": "textures/entity/marketing/rate_us/text/19",
+				"f20": "textures/entity/marketing/rate_us/text/20",
+				"f21": "textures/entity/marketing/rate_us/text/21",
+				"f22": "textures/entity/marketing/rate_us/text/22",
+				"f23": "textures/entity/marketing/rate_us/text/23",
+				"f24": "textures/entity/marketing/rate_us/text/24",
+				"f25": "textures/entity/marketing/rate_us/text/25",
+				"f26": "textures/entity/marketing/rate_us/text/26",
+				"f27": "textures/entity/marketing/rate_us/text/27",
+				"f28": "textures/entity/marketing/rate_us/text/28",
+				"f29": "textures/entity/marketing/rate_us/text/29",
+				"f30": "textures/entity/marketing/rate_us/text/30",
+				"f31": "textures/entity/marketing/rate_us/text/31",
+				"f32": "textures/entity/marketing/rate_us/text/32",
+				"f33": "textures/entity/marketing/rate_us/text/33",
+				"f34": "textures/entity/marketing/rate_us/text/34",
+				"f35": "textures/entity/marketing/rate_us/text/35",
+				"f36": "textures/entity/marketing/rate_us/text/36",
+				"f37": "textures/entity/marketing/rate_us/text/37",
+				"f38": "textures/entity/marketing/rate_us/text/38",
+				"f39": "textures/entity/marketing/rate_us/text/39",
+				"f40": "textures/entity/marketing/rate_us/text/40",
+				"f41": "textures/entity/marketing/rate_us/text/41",
+				"f42": "textures/entity/marketing/rate_us/text/42",
+				"f43": "textures/entity/marketing/rate_us/text/43",
+				"f44": "textures/entity/marketing/rate_us/text/44",
+				"f45": "textures/entity/marketing/rate_us/text/45",
+				"f46": "textures/entity/marketing/rate_us/text/46",
+				"f47": "textures/entity/marketing/rate_us/text/47",
+				"f48": "textures/entity/marketing/rate_us/text/48",
+				"f49": "textures/entity/marketing/rate_us/text/49",
+				"f50": "textures/entity/marketing/rate_us/text/50",
+				"f51": "textures/entity/marketing/rate_us/text/51",
+				"f52": "textures/entity/marketing/rate_us/text/52",
+				"f53": "textures/entity/marketing/rate_us/text/53",
+				"f54": "textures/entity/marketing/rate_us/text/54",
+				"f55": "textures/entity/marketing/rate_us/text/55",
+				"f56": "textures/entity/marketing/rate_us/text/56",
+				"f57": "textures/entity/marketing/rate_us/text/57",
+				"f58": "textures/entity/marketing/rate_us/text/58"
+			}
+		}
+	}
+}

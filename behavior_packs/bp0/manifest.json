@@ -1,0 +1,1 @@
+{"format_version":2,"header":{"description":"pack.description","name":"pack.name","uuid":"fee2a1fa-6c4f-4318-851a-11245bb2a83f","version":[1,0,4],"min_engine_version":[1,19,50]},"modules":[{"type":"data","uuid":"ba3e42e3-1977-4d0e-b7e3-f983c40703be","version":[1,0,4]}],"dependencies":[{"uuid":"fe8039e3-e43a-4167-a8db-80204fc5835f","version":[1,0,4]}]}

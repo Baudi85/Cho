@@ -1,0 +1,33 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "shapescape:mask_attachable",
+			"materials": {
+				"default": "armor",
+				"enchanted": "armor_enchanted"
+			},
+			"textures": {
+				"default": "textures/attachables/reward/mask_attachable",
+				"enchanted": "textures/misc/enchanted_item_glint"
+			},
+			"geometry": {
+				"default": "geometry.player_mask"
+			},
+			"animations": {
+				"hide": "animation.mask.hide",
+				"idle": "animation.player_mask.idle"
+			},
+			"scripts": {
+				"parent_setup": "variable.helmet_layer_visible = 0.0;",
+				"animate": [
+					{
+						"hide": "c.item_slot == 'head' && c.is_first_person"
+					},
+					"idle"
+				]
+			},
+			"render_controllers": ["controller.render.armor"]
+		}
+	}
+}

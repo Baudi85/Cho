@@ -1,0 +1,16 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "shapescape:mask"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:foil": false,
+			"minecraft:use_duration": 1000000,
+			"minecraft:food": {
+				"can_always_eat": true
+			}
+		}
+	}
+}
